@@ -1,0 +1,22 @@
+{
+    "departments": ["IT", "HR", "Finance"],
+    "acronyms": {
+      "IT": {
+        "HTTP": "HyperText Transfer Protocol",
+        "HTTP" "Test",
+        "FTP": "File Transfer Protocol",
+        "API": "Application Programming Interface"
+      },
+      "HR": {
+        "EOD": "End of Day",
+        "PTO": "Paid Time Off",
+        "HRIS": "Human Resource Information System"
+      },
+      "Finance": {
+        "ROI": "Return on Investment",
+        "EBITDA": "Earnings Before Interest, Taxes, Depreciation, and Amortization",
+        "CAGR": "Compound Annual Growth Rate"
+      }
+    }
+  }
+  

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acronym Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Acronym Search Tool</h1>
+
+    <label for="department">Select Department:</label>
+    <select id="department">
+        <option value="" disabled selected>Choose department</option>
+    </select>
+
+    <label for="search">Search for an acronym:</label>
+    <input type="text" id="search" placeholder="Type an acronym..." autocomplete="off">
+    <div class="search-results" id="results"></div>
+
+    <div id="definition"></div>
+    <script src="index.js"></script>
+</body>
+</html>
