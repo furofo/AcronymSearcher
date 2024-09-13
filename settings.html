@@ -14,49 +14,20 @@
         <a href="settings.html">Settings</a>
     </div>
 
-    <h1>Settings</h1>
-    
-    <label for="department">Select Department:</label>
-    <select id="department">
-        <option value="" disabled selected>Choose department</option>
-    </select>
-    
-    <button id="saveSettings">Save Department</button>
+    <div class="container">
+        <h1>Settings</h1>
 
-    <script>
-        // Simulate reading JSON file from root
-        const data = {
-            "departments": ["IT", "HR", "Finance"]
-        };
+        <label for="department">Select Department:</label>
+        <select id="department">
+            <option value="" disabled selected>Choose department</option>
+        </select>
 
-        const departmentSelect = document.getElementById('department');
-        const saveSettingsBtn = document.getElementById('saveSettings');
+        <button id="saveSettings">Save Department</button>
 
-        // Populate department dropdown
-        data.departments.forEach(department => {
-            const option = document.createElement('option');
-            option.value = department;
-            option.textContent = department;
-            departmentSelect.appendChild(option);
-        });
+        <!-- Message display area -->
+        <div id="message" class="message hidden"></div>
+    </div>
 
-        // Save selected department to localStorage
-        saveSettingsBtn.addEventListener('click', function () {
-            const selectedDepartment = departmentSelect.value;
-            if (!selectedDepartment) {
-                alert('Please select a department.');
-                return;
-            }
-            localStorage.setItem('selectedDepartment', selectedDepartment);
-            alert('Department saved successfully!');
-        });
-
-        // Pre-select the department if it's already saved
-        const storedDepartment = localStorage.getItem('selectedDepartment');
-        if (storedDepartment) {
-            departmentSelect.value = storedDepartment;
-        }
-    </script>
-
+    <script src="settings.js"></script>
 </body>
 </html>

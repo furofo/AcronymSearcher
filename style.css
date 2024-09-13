@@ -1,33 +1,69 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 /* Style for navigation bar */
 .navbar {
   background-color: #007bff;
-  padding: 10px;
   color: white;
+  padding: 15px;
   text-align: center;
+  width: 100%;
+  box-shadow: 0px 4px 2px -2px gray;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar a {
   color: white;
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .navbar a:hover {
   text-decoration: underline;
 }
 
-label,
-select,
-input {
-  margin: 10px 0 0 0;
+/* Content styling */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
   display: block;
-  padding: 0.25rem;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+input::placeholder {
+  color: #ccc;
+  opacity: 1; /* For better visibility */
+}
+.hidden {
+  display: none;
 }
 
 .search-results {
@@ -35,11 +71,13 @@ input {
   display: none;
   max-height: 150px;
   overflow-y: auto;
+  border-radius: 5px;
 }
 
 .search-results div {
   padding: 10px;
   cursor: pointer;
+  border-bottom: 1px solid #ddd;
 }
 
 .search-results div:hover {
@@ -50,9 +88,23 @@ input {
   margin-top: 20px;
   padding: 10px;
   border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fafafa;
   display: none;
 }
 
 .no-match {
   color: red;
+}
+
+#current-department {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+/* Highlight the currently selected result */
+.search-result.highlight {
+  background-color: #007bff;
+  color: white;
 }

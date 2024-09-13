@@ -14,18 +14,26 @@
         <a href="settings.html">Settings</a>
     </div>
 
-    <h1>Acronym Search Tool</h1>
+    <div class="container">
+        <h1>Acronym Search Tool</h1>
 
-    <!-- Display current department -->
-    <div id="current-department">
-        <strong>Selected Department:</strong> <span id="department-name"></span>
+        <!-- Display current department -->
+        <div id="current-department">
+            Selected Department: <span id="department-name"></span>
+        </div>
+
+        <!-- Hidden message if no department is selected -->
+        <div id="no-department-message" class="hidden">
+            No department selected. Please <a href="settings.html">click here</a> to choose a department.
+        </div>
+
+        <label for="search">Search for an acronym:</label>
+        <input type="text" id="search" placeholder="Type an acronym..." autocomplete="off">
+        <div class="search-results" id="results"></div>
+
+        <div id="definition"></div>
     </div>
 
-    <label for="search">Search for an acronym:</label>
-    <input type="text" id="search" placeholder="Type an acronym..." autocomplete="off">
-    <div class="search-results" id="results"></div>
-
-    <div id="definition"></div>
     <script src="index.js"></script>
 </body>
 </html>

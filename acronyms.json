@@ -3,7 +3,7 @@
     "acronyms": {
       "IT": {
         "HTTP": "HyperText Transfer Protocol",
-        "HTTP" "Test",
+        "HTTPS": "Securte hypertext trasnfer protocol",
         "FTP": "File Transfer Protocol",
         "API": "Application Programming Interface"
       },
