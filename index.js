@@ -20,30 +20,25 @@ const data = {
     }
 };
 
-const departmentSelect = document.getElementById('department');
+// Get elements from DOM
 const searchInput = document.getElementById('search');
 const resultsDiv = document.getElementById('results');
 const definitionDiv = document.getElementById('definition');
+const departmentNameSpan = document.getElementById('department-name');
 
-// Populate department dropdown
-data.departments.forEach(department => {
-    const option = document.createElement('option');
-    option.value = department;
-    option.textContent = department;
-    departmentSelect.appendChild(option);
-});
+// Read selected department from localStorage
+let selectedDepartment = localStorage.getItem('selectedDepartment');
 
-let selectedDepartment = "";
-let currentAcronyms = {};
+// Check if department is selected, if not redirect to settings
+if (!selectedDepartment) {
+    alert('No department selected. Please select a department in the settings.');
+    window.location.href = 'settings.html'; // Redirect to settings if no department is set
+} else {
+    // Display the selected department
+    departmentNameSpan.textContent = selectedDepartment;
+}
 
-// Listen for department change
-departmentSelect.addEventListener('change', function () {
-    selectedDepartment = this.value;
-    currentAcronyms = data.acronyms[selectedDepartment];
-    searchInput.value = '';
-    resultsDiv.innerHTML = '';
-    definitionDiv.style.display = 'none'; // Hide definition when department is changed
-});
+let currentAcronyms = data.acronyms[selectedDepartment];
 
 // Listen for input in the search box
 searchInput.addEventListener('input', function () {

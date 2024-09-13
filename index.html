@@ -16,10 +16,10 @@
 
     <h1>Acronym Search Tool</h1>
 
-    <label for="department">Select Department:</label>
-    <select id="department">
-        <option value="" disabled selected>Choose department</option>
-    </select>
+    <!-- Display current department -->
+    <div id="current-department">
+        <strong>Selected Department:</strong> <span id="department-name"></span>
+    </div>
 
     <label for="search">Search for an acronym:</label>
     <input type="text" id="search" placeholder="Type an acronym..." autocomplete="off">

@@ -15,7 +15,48 @@
     </div>
 
     <h1>Settings</h1>
-    <p>This is the settings page.</p>
+    
+    <label for="department">Select Department:</label>
+    <select id="department">
+        <option value="" disabled selected>Choose department</option>
+    </select>
+    
+    <button id="saveSettings">Save Department</button>
+
+    <script>
+        // Simulate reading JSON file from root
+        const data = {
+            "departments": ["IT", "HR", "Finance"]
+        };
+
+        const departmentSelect = document.getElementById('department');
+        const saveSettingsBtn = document.getElementById('saveSettings');
+
+        // Populate department dropdown
+        data.departments.forEach(department => {
+            const option = document.createElement('option');
+            option.value = department;
+            option.textContent = department;
+            departmentSelect.appendChild(option);
+        });
+
+        // Save selected department to localStorage
+        saveSettingsBtn.addEventListener('click', function () {
+            const selectedDepartment = departmentSelect.value;
+            if (!selectedDepartment) {
+                alert('Please select a department.');
+                return;
+            }
+            localStorage.setItem('selectedDepartment', selectedDepartment);
+            alert('Department saved successfully!');
+        });
+
+        // Pre-select the department if it's already saved
+        const storedDepartment = localStorage.getItem('selectedDepartment');
+        if (storedDepartment) {
+            departmentSelect.value = storedDepartment;
+        }
+    </script>
 
 </body>
 </html>
