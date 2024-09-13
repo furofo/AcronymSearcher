@@ -3,6 +3,25 @@ body {
   margin: 20px;
 }
 
+/* Style for navigation bar */
+.navbar {
+  background-color: #007bff;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
 label,
 select,
 input {
@@ -32,4 +51,8 @@ input {
   padding: 10px;
   border: 1px solid #ccc;
   display: none;
+}
+
+.no-match {
+  color: red;
 }
